@@ -94,6 +94,13 @@
 <Email />
 
 <style>
+  @font-face {
+    font-family: "Gmarket Sans TTF";
+    src:
+      url("/fonts/GmarketSans.woff2") format("woff2"),
+      url("/fonts/GmarketSans.woff") format("woff"),
+      url("/fonts/GmarketSans.ttf") format("truetype");
+  }
   :global(html),
   :global(body) {
     margin: 0;

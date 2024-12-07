@@ -96,11 +96,11 @@
 <style>
   @font-face {
     font-family: "Gmarket Sans TTF";
-    src:
-      url("/fonts/GmarketSans.woff2") format("woff2"),
-      url("/fonts/GmarketSans.woff") format("woff"),
-      url("/fonts/GmarketSans.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+    src: url("$lib/fonts/GmarketSans.ttf") format("truetype");
   }
+
   :global(html),
   :global(body) {
     scroll-behavior: smooth;

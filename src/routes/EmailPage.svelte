@@ -1,4 +1,4 @@
-<div class="background">
+<div id="CONTACTS" class="background">
   <div class="contact-form-container">
     <h1 class="form-title">Contact</h1>
     <p class="form-subtitle">

@@ -44,10 +44,10 @@
 
   <!-- Desktop Navigation -->
   <nav class="nav-links">
-    <div class="nav-link">ABOUT</div>
-    <div class="nav-link">Core Service</div>
-    <div class="nav-link">Education CONTENTS</div>
-    <div class="nav-link">CONTACTS</div>
+    <a href="#ABOUT" class="nav-link">ABOUT</a>
+    <a href="#CoreService" class="nav-link">Core Service</a>
+    <a href="#EducationContent" class="nav-link">Education CONTENTS</a>
+    <a href="#CONTACTS" class="nav-link">CONTACTS</a>
   </nav>
 
   <!-- Hamburger Menu Icon -->
@@ -96,6 +96,17 @@
     color: white;
   }
 
+  a {
+    text-decoration: none;
+    background-color: transparent;
+    color: black;
+  }
+  .whenTop a {
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+  }
+
   #Navbar.menu-open {
     background-color: #ffffff;
   }
@@ -119,7 +130,7 @@
     transition: color 0.3s ease;
   }
 
-  .nav-link:hover {
+  a:hover {
     color: #8c28fe;
   }
 

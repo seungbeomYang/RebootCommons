@@ -4,7 +4,7 @@
   import Navbar from "./Navbar.svelte";
   import ScrollPage from "./scroll_page.svelte";
   import Email from "./EmailPage.svelte";
-  import ScrollPlus from "./ScrollPlus.svelte";
+
   import EducationContent from "./EducationContent.svelte";
 
   let HeadImageIndex = 0;
@@ -44,7 +44,7 @@
 </div> -->
 <!-- Page Content -->
 <!-- <Header /> -->
-<div class="slideshow-container">
+<div class="slideshow-container" id="ABOUT">
   <div
     class="headSlide fade"
     class:Image-show={HeadImageIndex === 0}
@@ -78,7 +78,7 @@
   >
     <video src="/Videos/about-video3.mp4" autoplay muted loop></video>
     <div class="text long">
-      <div class="vision">MISSIONSSSSS</div>
+      <div class="vision">MISSION</div>
 
       <div>
         리부트커먼는 개인과 조직의 새로운 지평을 여는 촉진자를 지향합니다
@@ -103,6 +103,7 @@
   }
   :global(html),
   :global(body) {
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     width: 100%;

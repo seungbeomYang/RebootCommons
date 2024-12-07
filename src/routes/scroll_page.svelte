@@ -105,7 +105,7 @@
   });
 </script>
 
-<div class:fixed={isFixed} class:end={!isFixed}>
+<div class:fixed={isFixed} class:end={!isFixed} id="CoreService">
   <div class="content-section">
     <div
       class="core-service-title {activeImageIndex === 2 ? 'text-color' : ''}"

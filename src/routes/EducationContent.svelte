@@ -1,4 +1,4 @@
-<div class="background">
+<div class="background" id="EducationContent">
   <div class="property-variant">
     <div class="education-contents">EDUCATION CONTENTS</div>
     <div class="content-container">

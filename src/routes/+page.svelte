@@ -97,8 +97,20 @@
   @font-face {
     font-family: "Gmarket Sans TTF";
     font-style: normal;
+    font-weight: 100;
+    src: url("$lib/fonts/GmarketSansTTFLight.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Gmarket Sans TTF";
+    font-style: normal;
     font-weight: 500;
-    src: url("$lib/fonts/GmarketSans.ttf") format("truetype");
+    src: url("$lib/fonts/GmarketSansTTFMedium.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Gmarket Sans TTF";
+    font-style: normal;
+    font-weight: 700;
+    src: url("$lib/fonts/GmarketSansTTFBold.ttf") format("truetype");
   }
 
   :global(html),

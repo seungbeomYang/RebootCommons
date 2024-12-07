@@ -78,7 +78,7 @@
   >
     <video src="/Videos/about-video3.mp4" autoplay muted loop></video>
     <div class="text long">
-      <div class="vision">MISSION</div>
+      <div class="vision">MISSIONSSSSS</div>
 
       <div>
         리부트커먼는 개인과 조직의 새로운 지평을 여는 촉진자를 지향합니다

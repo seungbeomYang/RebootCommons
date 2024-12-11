@@ -1,6 +1,6 @@
 <div id="CONTACTS" class="background">
   <div class="contact-form-container">
-    <h1 class="form-title">Contact</h1>
+    <h1 class="form-title">CONTACT</h1>
     <p class="form-subtitle">
       문의사항은 아래로 연락주시면 빠르게 답변 드리겠습니다.
     </p>
@@ -38,12 +38,7 @@
         <label for="message">내용*</label>
         <textarea id="message" name="message" rows="5" required></textarea>
       </div>
-      <div class="form-group">
-        <label class="checkbox-container">
-          <input type="checkbox" id="privacy" name="privacy" required />
-          <span>개인정보 수집 및 이용에 동의합니다. <a href="#">보기</a></span>
-        </label>
-      </div>
+
       <button type="submit" class="submit-button">문의하기</button>
     </form>
   </div>
@@ -57,18 +52,28 @@
   /* General Styles */
   .background {
     width: 100%;
-    padding: 20px;
+    height: 100vh;
+    /* padding: 20px; */
     background-color: #f9f9f9;
     font-family: "Gmarket Sans TTF";
+    z-index: 100;
+    position: relative;
   }
 
   .contact-form-container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
+    /* max-width: 600px; */
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 5%;
+    padding: 5%;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    outline: solid;
+    outline-width: 3px;
+    outline-color: #8c28fe;
   }
 
   .form-title {
@@ -146,7 +151,7 @@
   }
 
   .submit-button:hover {
-    background-color: #555;
+    background-color: #8c28fe;
   }
 
   .submit-button:disabled {

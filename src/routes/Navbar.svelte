@@ -45,13 +45,13 @@
   <!-- Desktop Navigation -->
   <nav class="nav-links">
     <a href="#ABOUT" class="nav-link">ABOUT</a>
-    <a href="#CoreService" class="nav-link">Core Service</a>
-    <a href="#EducationContent" class="nav-link">Education CONTENTS</a>
+    <a href="#CoreService" class="nav-link">CORE SERVICE</a>
+    <a href="#EducationContent" class="nav-link">EDUCATION CONTENTS</a>
     <a href="#CONTACTS" class="nav-link">CONTACTS</a>
   </nav>
 
   <!-- Hamburger Menu Icon -->
-  <div
+  <!-- <div
     class="menu-icon"
     on:click={toggleMenu}
     class:whenTop={topScroll === true}
@@ -59,24 +59,25 @@
     <span></span>
     <span></span>
     <span></span>
-  </div>
+  </div> -->
 
   <!-- Mobile Menu -->
-  {#if isMenuOpen}
+  <!-- {#if isMenuOpen}
     <div class="mobile-menu">
       <div class="mobile-link" on:click={toggleMenu}>ABOUT</div>
       <div class="mobile-link" on:click={toggleMenu}>Core Service</div>
       <div class="mobile-link" on:click={toggleMenu}>Education CONTENTS</div>
       <div class="mobile-link" on:click={toggleMenu}>CONTACTS</div>
     </div>
-  {/if}
+  {/if} -->
 </div>
 
 <style>
   /* General Navbar Styles */
   #Navbar {
     position: fixed;
-    background-color: #ffffff;
+    background-color: #ffffffca;
+
     top: 0;
     z-index: 1000;
     width: 80%;
@@ -113,7 +114,7 @@
 
   /* Logo Styling */
   .Logo {
-    max-height: 60%;
+    max-height: 55%;
   }
 
   /* Navigation Links */
@@ -188,12 +189,59 @@
   }
 
   @media screen and (max-width: 1200px) {
+    /* .nav-links {
+      display: none;
+    } */
+
+    /* .menu-icon {
+      display: flex;
+    } */
+    .Logo {
+      max-height: 48%;
+    }
+    .nav-link {
+      font-size: 15px;
+    }
+  }
+  @media screen and (max-width: 961px) {
+    /* .nav-links {
+      display: none;
+    } */
+
+    /* .menu-icon {
+      display: flex;
+    } */
+    .Logo {
+      max-height: 45%;
+    }
+    .nav-link {
+      font-size: 13px;
+      /* gap: 3px; */
+    }
+    .nav-links {
+      gap: 20px;
+    }
+  }
+  @media screen and (max-width: 780px) {
     .nav-links {
       display: none;
+    }
+    #Navbar {
+      background-color: #ffffff00;
     }
 
     .menu-icon {
       display: flex;
+    }
+    .Logo {
+      max-height: 45%;
+    }
+    .nav-link {
+      font-size: 13px;
+      /* gap: 3px; */
+    }
+    .nav-links {
+      gap: 20px;
     }
   }
 </style>

@@ -6,6 +6,8 @@
   import Email from "./EmailPage.svelte";
 
   import EducationContent from "./EducationContent.svelte";
+  import HeaderPage from "./HeaderPage.svelte";
+  import Combined from "./Combined.svelte";
 
   let HeadImageIndex = 0;
   function plusSlides(n) {
@@ -18,6 +20,9 @@
 </script>
 
 <Navbar />
+<!-- <HeaderPage /> -->
+<Combined />
+
 <!-- 
 <div class="grid-overlay">
   
@@ -44,6 +49,8 @@
 </div> -->
 <!-- Page Content -->
 <!-- <Header /> -->
+
+<!-- 
 <div class="slideshow-container" id="ABOUT">
   <div
     class="headSlide fade"
@@ -87,10 +94,11 @@
 
     <div class="vision">VISION</div>
   </div>
-</div>
+</div> -->
+
 <!-- <ScrollPlus /> -->
-<ScrollPage />
-<EducationContent />
+<!-- <ScrollPage /> -->
+<!-- <EducationContent /> -->
 <Email />
 
 <style>

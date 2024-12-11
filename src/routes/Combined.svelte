@@ -557,6 +557,9 @@
     overflow: hidden;
     position: relative;
   } */
+  #CoreService {
+    box-sizing: border-box;
+  }
   .container {
     /* align-self: center; */
     margin: auto;

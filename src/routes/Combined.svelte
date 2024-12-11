@@ -1,9 +1,12 @@
 <script>
   import { onMount } from "svelte";
   import gsap from "gsap";
-  import ScrollTrigger from "gsap/ScrollTrigger";
+  import ScrollTrigger from "gsap/dist/ScrollTrigger"; // Use the `dist` version for compatibility
 
-  gsap.registerPlugin(ScrollTrigger);
+  // Register the plugin
+  if (typeof window !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+  }
   let headFixed = true;
   let isFixed = false;
   let afterFixed = false;

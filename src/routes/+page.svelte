@@ -21,7 +21,7 @@
 
 <Navbar />
 <!-- <HeaderPage /> -->
-<!-- <Combined /> -->
+<Combined />
 
 <!-- 
 <div class="grid-overlay">

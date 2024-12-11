@@ -169,8 +169,7 @@
   const recalculateScrollThreshold = () => {
     const coreServiceElement = document.getElementById("CoreService");
     if (coreServiceElement) {
-      scrollThreshold =
-        coreServiceElement.getBoundingClientRect().top + window.scrollY;
+      scrollThreshold = coreServiceElement.offsetTop + window.innerHeight * 2;
       // window.innerHeight * (window.innerWidth > 630 ? 2 : 1.8);
     }
   };

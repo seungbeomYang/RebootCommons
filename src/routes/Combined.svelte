@@ -169,7 +169,8 @@
   const recalculateScrollThreshold = () => {
     const coreServiceElement = document.getElementById("CoreService");
     if (coreServiceElement) {
-      scrollThreshold = coreServiceElement.offsetTop + window.innerHeight * 2;
+      // scrollThreshold = coreServiceElement.offsetTop;
+      scrollThreshold = window.innerHeight * 5;
       // window.innerHeight * (window.innerWidth > 630 ? 2 : 1.8);
     }
   };
@@ -209,6 +210,8 @@
         ease: "power1.in",
         scrollTrigger: {
           trigger: subVidContainer,
+          // start: "top center",
+          // end: () => scrollThreshold / 3,
           pin: true,
           scrub: true,
           onEnter: () => updateActivevideo(index), // Update video index when text enters

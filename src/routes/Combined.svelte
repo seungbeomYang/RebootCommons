@@ -170,9 +170,8 @@
     const coreServiceElement = document.getElementById("CoreService");
     if (coreServiceElement) {
       scrollThreshold =
-        coreServiceElement.getBoundingClientRect().top +
-        window.scrollY +
-        window.innerHeight * (window.innerWidth > 630 ? 2 : 1.8);
+        coreServiceElement.getBoundingClientRect().top + window.scrollY;
+      // window.innerHeight * (window.innerWidth > 630 ? 2 : 1.8);
     }
   };
   const refreshLayout = () => {

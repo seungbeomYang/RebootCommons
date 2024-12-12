@@ -219,6 +219,16 @@
         },
       });
     });
+    gsap.to(".arrows", {
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".arrows", // Container to monitor scroll
+        start: "top center", // Adjust scroll start
+        end: "bottom center", // Adjust scroll end
+        scrub: true, // Smooth scrolling effect
+      },
+    });
 
     const throttledScrollHandler = throttle(updateActiveCard, 100); // Adjust the throttle limit (e.g., 100ms)
 
@@ -250,7 +260,9 @@
 
 <!-- <div class="video-container"> -->
 <div id="ABOUT"></div>
+
 <div class="arrows"></div>
+
 <div
   class="video-container {headFixed ? 'headFixed' : 'headAbsolute'}"
   style={headFixed ? "" : `top: ${scrollThreshold}px;`}
@@ -470,57 +482,49 @@
 <style>
   .arrows {
     position: relative;
-    /**/
     position: absolute;
-    top: 70%;
+    top: 72%;
     left: 50%;
-    /**/
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     transform: translate(-50%, -50%);
     z-index: 100;
   }
+
   .arrows:before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    border-left: 26.6666666667px solid rgba(255, 255, 255, 0.7);
-    border-bottom: 26.6666666667px solid rgba(255, 255, 255, 0.7);
-    transform: translate(26.6666666667px, 106.6666666667px) rotate(-45deg);
+    border-left: 7.85px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 7.85px solid rgba(255, 255, 255, 0.7);
+    transform: translate(0px, 100px) rotate(-45deg); /* Adjusted overlap closer */
     animation: arrows 3s linear infinite;
   }
+
   .arrows:after {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    border-left: 26.6666666667px solid rgba(255, 255, 255, 0.7);
-    border-bottom: 26.6666666667px solid rgba(255, 255, 255, 0.7);
-    transform: translate(53.3333333333px, 0px) rotate(-45deg);
+    border-left: 7.85px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 7.85px solid rgba(255, 255, 255, 0.7);
+    transform: translate(0px, 90px) rotate(-45deg); /* Adjusted overlap closer */
     animation: arrows 3s linear infinite -1.5s;
   }
 
   @keyframes arrows {
     0% {
-      border-left: 26.6666666667px solid rgba(0, 0, 0, 0);
-      border-bottom: 26.6666666667px solid rgba(0, 0, 0, 0);
-      transform: translate(-13.3333333333px, -53.3333333333px) rotate(-45deg);
-    }
-    10%,
-    90% {
-      border-left: 26.6666666667px solid rgba(0, 0, 0, 0);
-      border-bottom: 26.6666666667px solid rgba(0, 0, 0, 0);
+      opacity: 0;
+      transform: translate(0px, 30px) rotate(-45deg); /* Adjust animation flow */
     }
     50% {
-      border-left: 26.6666666667px solid rgba(255, 255, 255, 0.7);
-      border-bottom: 26.6666666667px solid rgba(255, 255, 255, 0.7);
-      transform: translate(-13.3333333333px, 0px) rotate(-45deg);
+      opacity: 1;
+      transform: translate(0px, 75px) rotate(-45deg);
     }
     100% {
-      border-left: 26.6666666667px solid rgba(0, 0, 0, 0);
-      border-bottom: 26.6666666667px solid rgba(0, 0, 0, 0);
-      transform: translate(-13.3333333333px, 53.3333333333px) rotate(-45deg);
+      opacity: 0;
+      transform: translate(0px, 100px) rotate(-45deg);
     }
   }
   .subVidContainer {

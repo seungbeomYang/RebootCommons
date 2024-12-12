@@ -47,7 +47,7 @@
     <a href="#ABOUT" class="nav-link">ABOUT</a>
     <a href="#CoreService" class="nav-link">CORE SERVICE</a>
     <a href="#Educationcontent" class="nav-link">EDUCATION CONTENTS</a>
-    <a href="#CONTACTS" class="nav-link">CONTACTS</a>
+    <a href="#CONTACTS" class="nav-link">CONTACT</a>
   </nav>
 
   <!-- Hamburger Menu Icon -->

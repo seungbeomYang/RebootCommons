@@ -297,7 +297,7 @@
     <div class="text">
       <div class="vision">VISION</div>
 
-      <div>리부트커먼는 교육을 통해 <br />혁신을 디자인합니다</div>
+      <div>리부트커먼는 교육을 통해 <br />혁신을 디자인합니다.</div>
     </div>
   </div>
   <div class="subVidContainer">
@@ -306,7 +306,7 @@
 
       <div>
         리부트커먼는 개인과 조직의<br />새로운 지평을 여는 촉진자를
-        <br />지향합니다
+        <br />지향합니다.
       </div>
     </div>
   </div>

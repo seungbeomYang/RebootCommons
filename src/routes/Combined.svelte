@@ -258,6 +258,7 @@
       autoplay
       loop
       playsinline
+      preload="auto"
     ></video>
   {/each}
 </div>

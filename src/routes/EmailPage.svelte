@@ -1,42 +1,61 @@
+<script>
+  export let form;
+</script>
+
+<!-- <div class="wrapper">
+  <fieldset>
+    <legend>Send Emails</legend>
+    <form method="POST">
+      <div class="input">
+        <label for="to">To:</label>
+        <input name="to" type="email" value="hello@crocodaily.com" />
+      </div>
+      <div class="input">
+        <label for="subject">Subject:</label>
+        <input name="subject" type="text" />
+      </div>
+      <div class="input">
+        <label for="body">Body:</label>
+        <textarea name="body" rows="6"></textarea>
+      </div>
+      <button type="submit">Send</button>
+    </form>
+    <p class="success"></p>
+  </fieldset>
+</div> -->
+
 <div id="CONTACTS" class="background">
   <div class="contact-form-container">
     <h1 class="form-title">CONTACT</h1>
-    <p class="form-subtitle">
-      문의사항은 아래로 연락주시면 빠르게 답변 드리겠습니다.
-    </p>
-    <form action="#" method="POST" class="contact-form">
+
+    <form method="POST" class="contact-form">
       <div class="form-row">
         <div class="form-group">
           <label for="name">성명*</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" name="name" />
         </div>
         <div class="form-group">
           <label for="inquiry">문의사항*</label>
-          <select id="inquiry" name="inquiry" required>
-            <option value="" disabled selected>선택하세요</option>
-            <option value="general">일반 문의</option>
-            <option value="support">지원 요청</option>
-            <option value="feedback">피드백</option>
-          </select>
+          <input type="text" name="inquiry" />
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
           <label for="phone">휴대폰 번호</label>
-          <input type="tel" id="phone" name="phone" />
+          <input type="tel" name="phone" />
         </div>
         <div class="form-group">
           <label for="email">이메일 주소*</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" name="email" />
         </div>
       </div>
       <div class="form-group">
         <label for="subject">제목*</label>
-        <input type="text" id="subject" name="subject" required />
+        <input type="text" name="subject" />
       </div>
       <div class="form-group">
         <label for="message">내용*</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <textarea name="message" rows="5" required></textarea>
       </div>
 
       <button type="submit" class="submit-button">문의하기</button>
@@ -80,6 +99,7 @@
     font-size: 2rem;
     text-align: center;
     margin-bottom: 10px;
+    padding-bottom: 20px;
   }
 
   .form-subtitle {

@@ -46,7 +46,7 @@
   <nav class="nav-links">
     <a href="#ABOUT" class="nav-link">ABOUT</a>
     <a href="#CoreService" class="nav-link">CORE SERVICE</a>
-    <a href="#EducationContent" class="nav-link">EDUCATION CONTENTS</a>
+    <a href="#Educationcontent" class="nav-link">EDUCATION CONTENTS</a>
     <a href="#CONTACTS" class="nav-link">CONTACTS</a>
   </nav>
 

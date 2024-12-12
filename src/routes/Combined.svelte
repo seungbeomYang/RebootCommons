@@ -243,6 +243,7 @@
 </script>
 
 <!-- <div class="video-container"> -->
+<div id="ABOUT"></div>
 <div
   class="video-container {headFixed ? 'headFixed' : 'headAbsolute'}"
   style={headFixed ? "" : `top: ${scrollThreshold}px;`}
@@ -375,7 +376,7 @@
     </div>
   </div>
 </div>
-
+<div id="Educationcontent"></div>
 <div
   class:EducationContent={!isFixed2 && !afterFixed2}
   class:fixed={isFixed2}
@@ -789,6 +790,11 @@
     .container {
       width: 1240px;
     }
+    .card {
+      max-width: 300px;
+      min-height: 400px;
+      width: 300px;
+    }
   }
 
   @media screen and (min-width: 1100px) and (max-width: 1400px) {
@@ -801,10 +807,11 @@
       padding: 20vh 2.5%;
     }
 
-    /* .card {
-      max-width: 260px;
+    .card {
+      max-width: 300px;
       min-height: 400px;
-    } */
+      width: 300px;
+    }
   }
   @media screen and (max-width: 1100px) {
     .container {
@@ -908,6 +915,8 @@
 
       padding: 15px; /* Add padding to the card content */
       text-align: right; /* Align text to the right */
+      width: 300px;
+      /* height: 50000px; */
     }
     .cards_sub_container {
       display: flex;
@@ -915,6 +924,7 @@
       flex-direction: column;
       gap: 30vw;
       justify-content: center;
+      padding-top: 60vh;
     }
 
     .main-title {
@@ -948,6 +958,16 @@
     }
   }
   @media screen and (max-width: 570px) {
+    .card {
+      flex: 1;
+      /* max-width: 32vw; */
+      /* min-width: 300px; */
+
+      padding: 15px; /* Add padding to the card content */
+      text-align: right; /* Align text to the right */
+      width: 270px;
+      /* height: 50000px; */
+    }
     .content-section {
       padding-top: 10vh;
     }

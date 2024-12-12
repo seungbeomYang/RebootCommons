@@ -8,7 +8,8 @@
   import EducationContent from "./EducationContent.svelte";
   import HeaderPage from "./HeaderPage.svelte";
   import Combined from "./Combined.svelte";
-
+  import Footer from "./footer.svelte";
+  export let form;
   let HeadImageIndex = 0;
   function plusSlides(n) {
     HeadImageIndex = (HeadImageIndex + n + 3) % 3; // Cycle through slides (0, 1, 2)
@@ -100,6 +101,11 @@
 <!-- <ScrollPage /> -->
 <!-- <EducationContent /> -->
 <Email />
+<div class="footer">
+  <div class="footer-bottom">
+    <p>REBOOT COMMONS © COPYRIGHT 2024. ALL RIGHTS RESERVED.</p>
+  </div>
+</div>
 
 <style>
   @font-face {
@@ -225,6 +231,18 @@
     height: 100%; /* Full height of the grid */
     border-left: 1px solid rgba(255, 0, 0, 0.1); /* Optional left border for clarity */
     border-right: 1px solid rgba(255, 0, 0, 0.1); /* Optional right border for clarity */
+  }
+  .footer {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px 40px;
+    border-top: 1px solid #eee;
+  }
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
   }
   @media screen and (width > 1200px) and (width < 1400px) {
     .grid-overlay {

@@ -34,9 +34,13 @@
           <label for="name">성명*</label>
           <input type="text" name="name" />
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="inquiry">문의사항*</label>
           <input type="text" name="inquiry" />
+        </div> -->
+        <div class="form-group">
+          <label for="email">이메일 주소*</label>
+          <input type="email" name="email" />
         </div>
       </div>
       <div class="form-row">
@@ -45,14 +49,11 @@
           <input type="tel" name="phone" />
         </div>
         <div class="form-group">
-          <label for="email">이메일 주소*</label>
-          <input type="email" name="email" />
+          <label for="subject">제목*</label>
+          <input type="text" name="subject" />
         </div>
       </div>
-      <div class="form-group">
-        <label for="subject">제목*</label>
-        <input type="text" name="subject" />
-      </div>
+
       <div class="form-group">
         <label for="message">내용*</label>
         <textarea name="message" rows="5" required></textarea>

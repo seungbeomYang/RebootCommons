@@ -103,7 +103,7 @@
 <Email />
 <div class="footer">
   <div class="footer-bottom">
-    <p>REBOOT COMMONS © COPYRIGHT 2024. ALL RIGHTS RESERVED.</p>
+    <p>REBOOT COMMONS © COPYRIGHT 2024. <br />ALL RIGHTS RESERVED.</p>
   </div>
 </div>
 

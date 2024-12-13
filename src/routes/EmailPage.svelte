@@ -145,20 +145,6 @@
     resize: none;
   }
 
-  .checkbox-container {
-    display: flex;
-    align-items: center;
-    font-size: 0.8rem;
-  }
-
-  .checkbox-container a {
-    color: #007bff;
-    text-decoration: none;
-  }
-
-  .checkbox-container a:hover {
-    text-decoration: underline;
-  }
 
   .submit-button {
     padding: 12px;
@@ -208,9 +194,7 @@
       font-size: 1.2rem;
     }
 
-    .form-subtitle {
-      font-size: 0.8rem;
-    }
+    
 
     input[type="text"],
     input[type="email"],

@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  // import { enhance } from "$app/forms";
   import Header from "./Header.svelte";
   import Navbar from "./Navbar.svelte";
   import ScrollPage from "./scroll_page.svelte";
@@ -9,11 +10,27 @@
   import HeaderPage from "./HeaderPage.svelte";
   import Combined from "./Combined.svelte";
   import Footer from "./footer.svelte";
-  export let form;
+  import { enhance } from "$app/forms";
+
   let HeadImageIndex = 0;
   function plusSlides(n) {
     HeadImageIndex = (HeadImageIndex + n + 3) % 3; // Cycle through slides (0, 1, 2)
   }
+  const handleSubmit = async (event) => {
+    event.preventDefault(); // Prevent default form submission
+    const formData = new FormData(event.target);
+
+    // Submit the form data via fetch
+    const response = await fetch("/submission", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (response.ok) {
+      // Navigate to a new tab
+      window.location.href = "/submission";
+    }
+  };
 
   onMount(() => {
     console.log("Page mounted");
@@ -100,7 +117,42 @@
 <!-- <ScrollPlus /> -->
 <!-- <ScrollPage /> -->
 <!-- <EducationContent /> -->
-<Email />
+<!-- <Email /> -->
+<div id="CONTACTS" class="emailBackground">
+  <div class="contact-form-container">
+    <h1 class="form-title">CONTACT</h1>
+
+    <form method="POST" class="contact-form" on:submit={handleSubmit}>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">성명*</label>
+          <input type="text" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">이메일 주소*</label>
+          <input type="email" name="email" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">휴대폰 번호</label>
+          <input type="tel" name="phone" />
+        </div>
+        <div class="form-group">
+          <label for="subject">제목*</label>
+          <input type="text" name="subject" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message">내용*</label>
+        <textarea name="message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-button">문의하기</button>
+    </form>
+  </div>
+</div>
+
 <div class="footer">
   <div class="footer-bottom">
     <p>REBOOT COMMONS © COPYRIGHT 2024. <br />ALL RIGHTS RESERVED.</p>
@@ -108,6 +160,151 @@
 </div>
 
 <style>
+  * {
+    font-family: "Gmarket Sans TTF";
+  }
+  input {
+    font-family: "Gmarket Sans TTF";
+  }
+  textarea {
+    font-family: "Gmarket Sans TTF";
+  }
+  /* General Styles */
+  .emailBackground {
+    width: 100%;
+    height: 100vh;
+    /* padding: 20px; */
+    background-color: #f9f9f9;
+    font-family: "Gmarket Sans TTF";
+    z-index: 100;
+    position: relative;
+  }
+
+  .contact-form-container {
+    /* max-width: 600px; */
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 5%;
+    padding: 5%;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    outline: solid;
+    outline-width: 3px;
+    outline-color: #8c28fe;
+  }
+
+  .form-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+  }
+
+  .form-subtitle {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 25px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .form-group label {
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .submit-button {
+    padding: 12px;
+    background-color: f9f9f9;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .submit-button:hover {
+    background-color: #8c28fe;
+  }
+
+  .submit-button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+    }
+
+    .contact-form-container {
+      padding: 15px;
+    }
+
+    .form-title {
+      font-size: 1.5rem;
+    }
+
+    .form-subtitle {
+      font-size: 0.9rem;
+    }
+
+    .submit-button {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .form-title {
+      font-size: 1.2rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      font-size: 0.9rem;
+    }
+
+    .submit-button {
+      font-size: 0.8rem;
+    }
+  }
   @font-face {
     font-family: "Gmarket Sans TTF";
     font-style: normal;

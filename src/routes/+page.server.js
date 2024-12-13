@@ -29,7 +29,7 @@ export const actions = {
       const message = {
         from: email,
         to: GOOGLE_EMAIL,
-        bcc: "rebootcommons@gmail.com",
+        bcc: "contact@rebootcommons.com ",
         subject: `New Inquiry: ${subject}`,
         text: body,
         html: html,

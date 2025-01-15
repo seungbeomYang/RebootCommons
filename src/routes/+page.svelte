@@ -155,7 +155,11 @@
 
 <div class="footer">
   <div class="footer-bottom">
-    <p>REBOOT COMMONS © COPYRIGHT 2024. <br />ALL RIGHTS RESERVED.</p>
+    <p>
+      회사명 : 리부트커먼즈 ㅣ 대표자 : 김준성 ㅣ 사업자등록번호 : 375-06-03086
+      ㅣ 이메일 : contact@rebootcommons.com<br />REBOOT COMMONS © COPYRIGHT
+      2024. ALL RIGHTS RESERVED.
+    </p>
   </div>
 </div>
 

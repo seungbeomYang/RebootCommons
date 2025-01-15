@@ -157,8 +157,8 @@
   <div class="footer-bottom">
     <p>
       회사명 : 리부트커먼즈 ㅣ 대표자 : 김준성 ㅣ 사업자등록번호 : <span
-        >375-06-03086</span
-      >
+        ><a href="google.com" target="_blank">375-06-03086</a>
+      </span>
       ㅣ <span>이메일 : contact@rebootcommons.com</span><br />REBOOT COMMONS ©
       COPYRIGHT 2024. ALL RIGHTS RESERVED.
     </p>

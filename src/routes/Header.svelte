@@ -1,24 +1,14 @@
-<!-- <script>
+<script>
   import { onMount } from "svelte";
 
   onMount(() => {
     console.log("Page mounted");
   });
-</script> -->
-
-<script>
-  import { onMount } from "svelte";
-
-  onMount(() => {
-    document
-      .querySelector('meta[name="description"]')
-      .setAttribute(
-        "content",
-        "리부트커먼는 혁신적 교육을 통해 자기다움을 발견하며 삶의 재부팅을 실현합니다.",
-      );
-    console.log("Meta description updated");
-  });
 </script>
+
+<svelte:head>
+  <meta name="description" content="혁신적 기업교육과 멘토링" />
+</svelte:head>
 
 <div class="page1">
   <video src="/Videos/about-video1.mp4" autoplay muted loop></video>
